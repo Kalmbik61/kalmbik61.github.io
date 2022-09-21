@@ -529,9 +529,18 @@ button:hover {
 }
 
 .different__block {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 45px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .different__item {
@@ -546,8 +555,9 @@ button:hover {
   justify-content: center;
   border: 0.6px solid #0037fc;
   border-radius: 20px;
-  width: 370px;
+  width: calc(33.3333333333% - 45px);
   height: 140px;
+  padding: 0 20px;
 }
 
 .different__title {
@@ -637,17 +647,16 @@ button:hover {
   border: 1px solid #ffffff;
 }
 
-.pricing__item:hover {
+.pricing__item.active {
   border: 1px solid #0037fc;
   background: #e9f8ff;
-  cursor: pointer;
 }
 
-.pricing__item:hover .pricing__price {
+.pricing__item.active .pricing__price {
   color: #0037fc;
 }
 
-.pricing__item:hover .pricing__price::before {
+.pricing__item.active .pricing__price::before {
   content: "(save up to $40)";
   position: absolute;
   top: 98px;
@@ -963,17 +972,12 @@ button:hover {
 
   .comparison__data {
     margin: 0 auto;
-    max-width: 599px;
-    grid-template-columns: repeat(3, 199px);
-    border: none;
-    background: none;
-    grid-gap: 20px;
-  }
-
-  .comparison__item {
-    border-radius: 27px;
-    border: 1px solid #64a2ff;
-    background: #0065fc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .benefits__container {
@@ -1004,9 +1008,6 @@ button:hover {
   }
 
   .different__block {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    width: 700px;
     margin: 0 auto;
   }
 
@@ -1026,7 +1027,6 @@ button:hover {
   .pricing__data {
     max-width: 500px;
     margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1044,12 +1044,19 @@ button:hover {
   }
 
   .testimonials__data {
-    grid-template-columns: 1fr;
-    row-gap: 60px;
+    row-gap: 40px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     justify-items: center;
+  }
+
+  .testimonials__item {
+    width: initial;
+  }
+
+  .testimonials__text {
+    padding: 0 15px 40px 15px;
   }
 }
 
@@ -1244,6 +1251,19 @@ button:hover {
 
   .different__block {
     width: auto;
+  }
+
+  .different__item {
+    width: calc(50% - 45px);
+  }
+
+  .pricing__data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials__data {
     grid-template-columns: 1fr;
   }
 }
@@ -1286,12 +1306,23 @@ button:hover {
   }
 
   .comparison__data {
-    grid-template-columns: 199px;
-    width: 200px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .comparison__img {
     top: 94px;
+  }
+
+  .comparison__item {
+    width: 33.3333333333%;
+    border-bottom: 1px solid #64a2ff;
+  }
+
+  .comparison__item:nth-child(4),
+  .comparison__item:nth-child(5),
+  .comparison__item:nth-child(6) {
+    border-bottom: none;
   }
 
   .more {
@@ -1346,6 +1377,10 @@ button:hover {
     text-align: center;
   }
 
+  .comparison__data {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .comparison__title {
     font-size: 36px;
     line-height: 39px;
@@ -1353,6 +1388,19 @@ button:hover {
 
   .comparison__description {
     padding-bottom: 30px;
+  }
+
+  .comparison__item {
+    max-width: 150px;
+  }
+
+  .comparison__text {
+    font-size: 12px;
+  }
+
+  .comparison__price {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .benefits__container {
@@ -1379,6 +1427,10 @@ button:hover {
     width: 133px;
   }
 
+  .benefits__text {
+    width: auto;
+  }
+
   .user {
     padding-top: 80px;
   }
@@ -1400,17 +1452,36 @@ button:hover {
     font-size: 36px;
   }
 
+  .different__block {
+    gap: 20px;
+    width: auto;
+  }
+
   .different__item {
-    width: 280px;
-    height: 100px;
+    width: calc(50% - 20px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 10px;
+    height: 200px;
   }
 
   .different__img {
     width: 60px;
+    min-height: 60px;
   }
 
   .different__text {
-    margin-left: 10px;
+    width: auto;
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .different__text span {
+    font-size: 12px;
   }
 
   .pricing {
