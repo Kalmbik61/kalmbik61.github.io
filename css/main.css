@@ -73,6 +73,15 @@ button:hover {
 .header__button {
   width: 120px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: none;
   text-transform: uppercase;
   border: 1px solid #ffffff;
@@ -194,6 +203,15 @@ button:hover {
 }
 
 .home__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 219px;
   height: 40px;
   background: #0037fc;
@@ -271,7 +289,6 @@ button:hover {
   background: linear-gradient(180deg, #053af4 -54.27%, #859ffb 100%);
   -webkit-box-shadow: 0px 2px 13px #1170ff;
   box-shadow: 0px 2px 13px #1170ff;
-  cursor: pointer;
 }
 
 .comparison__company {
@@ -403,16 +420,21 @@ button:hover {
   transition: 0.2s;
 }
 
-.benefits__img:hover {
-  background: #e7f5ff;
-  cursor: pointer;
-}
-
 .benefits__text {
   width: 150px;
 }
 
 .benefits__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
   width: 219px;
   height: 40px;
   background: #0037fc;
@@ -491,10 +513,6 @@ button:hover {
   border: none;
   color: #0037fc;
   background: #ffffff;
-}
-
-.user__text {
-  padding-top: 3px;
 }
 
 .user__icon {
@@ -733,6 +751,15 @@ button:hover {
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   color: #000000;
   border: 1px solid #0037fc;
   margin-left: 32px;
