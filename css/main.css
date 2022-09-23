@@ -36,6 +36,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  caret-color: transparent;
 }
 
 ul {
@@ -44,6 +45,32 @@ ul {
 
 a {
   text-decoration: none;
+  caret-color: transparent;
+}
+
+p {
+  caret-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  caret-color: transparent;
+}
+
+span {
+  caret-color: transparent;
+}
+
+div {
+  caret-color: transparent;
+}
+
+label {
+  caret-color: transparent;
 }
 
 img {
